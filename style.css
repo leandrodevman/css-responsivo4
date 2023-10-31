@@ -1,0 +1,144 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Roboto, sans-serif;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+header > .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header {
+    margin-bottom: 56px;
+    padding: 16px 0;
+    background-color: #2862ff;
+    color: #ecf0f1;
+}
+
+header nav li {
+    display: inline;
+    margin-left: 16px;
+    font-size: 18px;
+}
+
+header nav li a {
+    color: #ecf0f1;
+    text-decoration:none;
+}
+
+header h1, ul {
+    padding: 0 20px;
+}
+
+#about {
+    display: flex;
+}
+
+#about img {
+    padding: 0 16px;
+}
+
+.about {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+}
+
+.about img {
+    max-width: 500px;
+    flex: 1;
+}
+
+.about-text {
+    flex: 2;
+    text-align: justify;
+    width: 100%;
+}
+
+.about-text p {
+    margin: 0 16px;
+}
+
+section {
+    padding: 24px 0;
+}
+
+section h2 {
+    color: #2862ff;
+    padding: 24px;
+    margin-bottom: 24px;
+    max-width: 100%;
+    border-bottom: 2px solid #2862ff;
+}
+
+.lista-tenis {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.lista-tenis li h3 {
+    margin-top: 16px;
+    margin-bottom: 8px;
+}
+
+button {
+    display: block;
+    width: 100%;
+    padding: 8px 0;
+    margin-top: 8px;
+    border: none;
+    background-color: #2862ff;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 16px;
+    cursor: pointer;
+}
+
+.lista-tenis li {
+    list-style: none;
+       /* quatro items por linha na visao desktop */
+    max-width:  calc(21% - 20px);
+
+    margin: 20px;
+}
+/* limitar altura imagem */
+li img {
+    max-height: 200px;
+}
+
+@media screen and (max-width: 1020px) {
+    .lista-tenis li {
+        max-width: calc(50% - 20px); /* Dois items por linha/row em tablet*/
+    }
+
+    section .container {
+    display: block;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .lista-tenis li {
+        display: block;
+        max-width: 100%;
+        max-width: calc(100% - 20px); /* Apenas um item por linha/row em celular */
+    }
+
+    .about img {
+        max-width: 100%;
+    }
+}
